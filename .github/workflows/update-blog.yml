@@ -1,0 +1,48 @@
+# .github/workflows/update-blog.yml
+# Fetches latest blog posts from mihirdixit.dev/blog RSS feed
+# and updates the BLOG_START / BLOG_END block in README.md.
+# Triggers: daily at 06:00 UTC, and on push to main.
+
+name: Update Blog Posts
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-blog:
+    name: Fetch and update blog posts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run update_blog script
+        run: python scripts/update_blog.py
+        env:
+          BLOG_RSS_URL: ${{ vars.BLOG_RSS_URL }}
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          message: "chore(readme): update latest blog posts [skip ci]"
+          add: "README.md"

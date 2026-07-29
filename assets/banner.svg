@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="280" fill="#0d1117"/>
+
+  <!-- Subtle top border accent -->
+  <rect x="0" y="0" width="1200" height="2" fill="#30363d"/>
+
+  <!-- Left vertical accent line -->
+  <rect x="60" y="40" width="1" height="200" fill="#21262d"/>
+
+  <!-- Dot grid decoration (subtle) -->
+  <g opacity="0.06">
+    <circle cx="1100" cy="60" r="1.5" fill="#e6edf3"/>
+    <circle cx="1120" cy="60" r="1.5" fill="#e6edf3"/>
+    <circle cx="1140" cy="60" r="1.5" fill="#e6edf3"/>
+    <circle cx="1160" cy="60" r="1.5" fill="#e6edf3"/>
+    <circle cx="1100" cy="80" r="1.5" fill="#e6edf3"/>
+    <circle cx="1120" cy="80" r="1.5" fill="#e6edf3"/>
+    <circle cx="1140" cy="80" r="1.5" fill="#e6edf3"/>
+    <circle cx="1160" cy="80" r="1.5" fill="#e6edf3"/>
+    <circle cx="1100" cy="100" r="1.5" fill="#e6edf3"/>
+    <circle cx="1120" cy="100" r="1.5" fill="#e6edf3"/>
+    <circle cx="1140" cy="100" r="1.5" fill="#e6edf3"/>
+    <circle cx="1160" cy="100" r="1.5" fill="#e6edf3"/>
+    <circle cx="1100" cy="120" r="1.5" fill="#e6edf3"/>
+    <circle cx="1120" cy="120" r="1.5" fill="#e6edf3"/>
+    <circle cx="1140" cy="120" r="1.5" fill="#e6edf3"/>
+    <circle cx="1160" cy="120" r="1.5" fill="#e6edf3"/>
+  </g>
+
+  <!-- Prompt indicator -->
+  <text x="76" y="72" class="mono" font-size="13" fill="#3fb950" opacity="0.9">▶</text>
+
+  <!-- Name -->
+  <text x="100" y="72" class="mono" font-size="13" fill="#58a6ff" letter-spacing="0.5">mihir-dixit2k27</text>
+  <text x="228" y="72" class="mono" font-size="13" fill="#30363d">~</text>
+  <text x="240" y="72" class="mono" font-size="13" fill="#e6edf3" opacity="0.5">$</text>
+  <text x="252" y="72" class="mono" font-size="13" fill="#e6edf3" opacity="0.4">whoami</text>
+
+  <!-- Main Name -->
+  <text x="100" y="138" class="sans" font-size="42" font-weight="700" fill="#e6edf3" letter-spacing="-1">Mihir Dixit</text>
+
+  <!-- Title / Tagline -->
+  <text x="102" y="170" class="sans" font-size="16" font-weight="400" fill="#8b949e" letter-spacing="0.1">Backend Engineer · Distributed Systems · CNCF Contributor</text>
+
+  <!-- Divider -->
+  <rect x="100" y="188" width="340" height="1" fill="#21262d"/>
+
+  <!-- Stack tags -->
+  <g class="mono" font-size="11" fill="#8b949e" letter-spacing="0.3">
+    <text x="100" y="210">Go</text>
+    <rect x="118" y="204" width="1" height="10" fill="#30363d"/>
+    <text x="126" y="210">Prometheus</text>
+    <rect x="196" y="204" width="1" height="10" fill="#30363d"/>
+    <text x="204" y="210">gRPC</text>
+    <rect x="232" y="204" width="1" height="10" fill="#30363d"/>
+    <text x="240" y="210">NATS</text>
+    <rect x="266" y="204" width="1" height="10" fill="#30363d"/>
+    <text x="274" y="210">PostgreSQL</text>
+    <rect x="348" y="204" width="1" height="10" fill="#30363d"/>
+    <text x="356" y="210">Kubernetes</text>
+  </g>
+
+  <!-- Codeforces badge area -->
+  <rect x="100" y="228" width="130" height="22" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="112" y="243" class="mono" font-size="10" fill="#8b949e">CF</text>
+  <rect x="132" y="232" width="1" height="14" fill="#21262d"/>
+  <text x="140" y="243" class="mono" font-size="10" fill="#e6edf3">Specialist · 1422</text>
+
+  <!-- CNCF PRs badge -->
+  <rect x="242" y="228" width="130" height="22" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="254" y="243" class="mono" font-size="10" fill="#8b949e">OSS</text>
+  <rect x="274" y="232" width="1" height="14" fill="#21262d"/>
+  <text x="282" y="243" class="mono" font-size="10" fill="#3fb950">40+ merged PRs</text>
+
+  <!-- Bottom subtle line -->
+  <rect x="0" y="278" width="1200" height="2" fill="#21262d"/>
+</svg>

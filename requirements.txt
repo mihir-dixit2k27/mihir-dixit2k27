@@ -1,0 +1,9 @@
+# Python dependencies for README automation scripts
+# All core logic uses stdlib only. These packages are for optional
+# features and testing.
+
+# HTTP + feed parsing
+feedparser==6.0.11
+
+# Linting / formatting (dev only)
+ruff==0.4.4

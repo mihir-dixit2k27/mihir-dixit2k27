@@ -1,0 +1,63 @@
+# .github/workflows/update-readme.yml
+# Master workflow: calls update_readme.py which orchestrates all README
+# section updates — current focus, project release versions, and metrics.
+# Safe to re-run idempotently: only commits if content changed.
+
+name: Update README
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"   # Weekly on Monday at midnight UTC
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_readme.py"
+      - ".github/workflows/update-readme.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Regenerate dynamic README sections
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run update_readme script
+        run: python scripts/update_readme.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME }}
+          BLOG_RSS_URL: ${{ vars.BLOG_RSS_URL }}
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated README
+        if: steps.diff.outputs.changed == 'true'
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          message: "chore(readme): automated weekly update [skip ci]"
+          add: "README.md"
