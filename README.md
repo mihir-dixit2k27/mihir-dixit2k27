@@ -237,10 +237,7 @@ All contributions follow the DCO sign-off workflow. No drive-by typo fixes — e
 ## Writing
 
 <!-- BLOG_START -->
-> Blog posts are automatically fetched from [mihirdixit.dev/blog](https://mihirdixit.dev/blog).
-> Updated weekly via [`.github/workflows/update-blog.yml`](./.github/workflows/update-blog.yml).
-
-_No posts yet. First post in progress._
+> _No posts yet. First post in progress._
 <!-- BLOG_END -->
 
 ---
