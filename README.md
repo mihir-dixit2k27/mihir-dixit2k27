@@ -14,7 +14,6 @@ Final year CS at VIT Vellore. I write Go, work on distributed systems, and contr
 
 - [OpenFlow](https://github.com/mihir-dixit2k27/openflow) - distributed workflow automation platform
 - [Hotreload](https://github.com/mihir-dixit2k27/hotreload) - Go CLI with live reload and crash detection
-
 - ```text
 $ zsh re-coordinate
 
