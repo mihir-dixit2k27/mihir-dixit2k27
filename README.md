@@ -14,10 +14,6 @@ Final year CS at VIT Vellore. I write Go, work on distributed systems, and contr
 
 - [OpenFlow](https://github.com/mihir-dixit2k27/openflow) - distributed workflow automation platform
 - [Hotreload](https://github.com/mihir-dixit2k27/hotreload) - Go CLI with live reload and crash detection
-- ```text
-$ zsh re-coordinate
-
-three minds are awake.
 
                  Sleeping
                  ████████████████████........  27.38 %
@@ -33,16 +29,6 @@ three minds are awake.
                  █████.....................  04.76 %
                  Pondering
                  ███.......................  03.57 %
-
-a week inside my head
-from 2026 → 1000 years from now
-
-$ ssh truth-terminal
-
-> 10% skill
-> 90% imagination
-
-re-coordinate ~
 
 <br/>
 
