@@ -6,7 +6,6 @@
 
 Final year CS at VIT Vellore. I write Go, work on distributed systems, and contribute to CNCF projects. Codeforces Specialist (1422).
 
-> 40+ merged pull requests across 7 CNCF projects, as a final year undergrad.
 
 <br/>
 
