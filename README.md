@@ -4,7 +4,7 @@
 
 <br/>
 
-Final year CS at VIT Vellore. I write Go, work on distributed systems, and contribute to CNCF projects. Codeforces Specialist (1422).
+Final year CS at VIT Vellore. I write Go, Python and C++, Work on distributed systems, and contribute to CNCF projects. Codeforces Specialist (1422).
 
 
                  Sleeping
